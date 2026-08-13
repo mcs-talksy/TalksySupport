@@ -13,7 +13,7 @@
 }
 
 html {
-    font-size: 16px;
+    font-size: 12px;
 }
 
 body {
@@ -45,7 +45,7 @@ body {
 .hero h1 {
     margin: 0;
     font-size: clamp(2.5rem, 8vw, 3.5rem);
-    line-height: 1.05;
+    line-height: 1.0;
     font-weight: 700;
     letter-spacing: -0.045em;
 }
@@ -57,23 +57,23 @@ body {
 }
 
 section {
-    margin-bottom: 18px;
-    padding: 0 16px 16px;
+    margin-bottom: 16px;
+    padding: 0 12px 12px;
     background: var(--talksy-pale-yellow);
     border-radius: 16px;
 }
 
 section h2 {
     margin: 0;
-    padding: 16px 0 12px;
-    font-size: 1.45rem;
+    padding: 12px 8px 8px;
+    font-size: 1.25rem;
     line-height: 1.15;
     font-weight: 700;
     letter-spacing: -0.025em;
 }
 
 .section-content {
-    padding: 16px;
+    padding: 12px;
     background: var(--talksy-white);
     border-radius: 16px;
 }
