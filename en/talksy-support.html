@@ -4,458 +4,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Talksy Support</title>
-
-    <style>
-        :root {
-            --bg: #fbf3e0;
-            --panel: #ffffff;
-            --ink: #2a2417;
-            --ink-soft: #7a6f52;
-            --line: #ecdfbd;
-            --accent: #b6791a;
-            --accent-soft: #f7e9cc;
-            --coral: #e2673f;
-            --coral-soft: #fbe9e2;
-            --sun: #f2a53c;
-            --sun-soft: #fdf1de;
-            --mint: #1f9d7c;
-            --mint-soft: #e2f6ef;
-            --violet: #7c5cbf;
-            --violet-soft: #efe8fa;
-            --sans: -apple-system, BlinkMacSystemFont, "Nunito", "Helvetica Neue", Arial, sans-serif;
-        }
-
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-            background: var(--bg);
-            color: var(--ink);
-            font-family: var(--sans);
-            padding-bottom: 90px;
-        }
-
-        .wrap {
-            max-width: 720px;
-            margin: 0 auto;
-            padding: 0 22px;
-        }
-
-        a {
-            color: var(--accent);
-        }
-
-        header {
-            padding: 50px 22px 34px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        header .wave {
-            position: absolute;
-            inset: 0;
-            z-index: 0;
-            opacity: 0.5;
-        }
-
-        header .inner {
-            max-width: 720px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 1;
-        }
-
-        .kicker {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: var(--panel);
-            border: 1px solid var(--line);
-            border-radius: 100px;
-            padding: 6px 14px;
-            font-size: 13px;
-            font-weight: 700;
-            color: var(--accent);
-            margin-bottom: 18px;
-        }
-
-        h1 {
-            font-size: 36px;
-            margin: 0 0 12px;
-            letter-spacing: -0.02em;
-        }
-
-        .lede {
-            color: var(--ink-soft);
-            font-size: 16px;
-            max-width: 54ch;
-            margin: 0 0 4px;
-            line-height: 1.6;
-        }
-
-        section.group {
-            margin-top: 36px;
-        }
-
-        .group-head {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 6px;
-        }
-
-        .group-icon {
-            width: 38px;
-            height: 38px;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 18px;
-            flex: 0 0 auto;
-        }
-
-        section.group h2 {
-            font-size: 21px;
-            margin: 0;
-        }
-
-        .group-note {
-            color: var(--ink-soft);
-            font-size: 14px;
-            margin: 0 0 16px 50px;
-            max-width: 58ch;
-        }
-
-        .card {
-            background: var(--panel);
-            border: 1px solid var(--line);
-            border-radius: 18px;
-            margin-bottom: 10px;
-            padding: 16px 18px;
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-
-        .card p {
-            margin: 0;
-            font-size: 14.5px;
-            color: var(--ink);
-            line-height: 1.6;
-        }
-
-        .card p.small {
-            font-size: 13.5px;
-            color: var(--ink-soft);
-        }
-
-        .card-title {
-            font-weight: 800;
-            font-size: 15.5px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .badges {
-            display: flex;
-            gap: 6px;
-            flex-wrap: wrap;
-        }
-
-        .badge {
-            font-size: 10.5px;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            padding: 3px 8px;
-            border-radius: 100px;
-        }
-
-        .badge.mint {
-            color: var(--mint);
-            background: var(--mint-soft);
-        }
-
-        .badge.coral {
-            color: var(--coral);
-            background: var(--coral-soft);
-        }
-
-        .badge.accent {
-            color: var(--accent);
-            background: var(--accent-soft);
-        }
-
-        /* About card */
-        .about-langs {
-            display: flex;
-            gap: 6px;
-            flex-wrap: wrap;
-            margin-top: 2px;
-        }
-
-        .lang-pill {
-            font-size: 12.5px;
-            font-weight: 700;
-            padding: 4px 10px;
-            border-radius: 100px;
-            background: var(--accent-soft);
-            color: var(--accent);
-        }
-
-        /* Contact card */
-        .contact-btn {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 10px;
-            background: var(--accent-soft);
-            border-radius: 12px;
-            padding: 12px 14px;
-            text-decoration: none;
-            color: var(--ink);
-            font-weight: 700;
-            font-size: 14.5px;
-        }
-
-        .contact-btn .arrow {
-            color: var(--accent);
-            font-size: 15px;
-        }
-
-        /* Topic list for "what to write in" */
-        .topics {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            margin-top: 2px;
-        }
-
-        .topic {
-            display: flex;
-            gap: 10px;
-            align-items: flex-start;
-        }
-
-        .topic .dot-icon {
-            width: 26px;
-            height: 26px;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 13px;
-            flex: 0 0 auto;
-            margin-top: 1px;
-        }
-
-        .topic p {
-            font-size: 14px;
-        }
-
-        .topic strong {
-            display: block;
-            font-size: 14.5px;
-            margin-bottom: 1px;
-        }
-
-        /* Link-out row */
-        .linkout {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 10px;
-            text-decoration: none;
-            color: var(--ink);
-        }
-
-        .linkout .arrow {
-            color: var(--accent);
-            font-size: 15px;
-            flex: 0 0 auto;
-        }
-
-        /* Promise strip */
-        .promise-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 8px;
-            margin-top: 2px;
-        }
-
-        .promise {
-            background: var(--mint-soft);
-            border-radius: 12px;
-            padding: 10px 12px;
-            font-size: 13px;
-            font-weight: 700;
-            color: #146a52;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        footer {
-            max-width: 720px;
-            margin: 60px auto 0;
-            padding: 24px 22px 0;
-            border-top: 1px solid var(--line);
-            font-size: 13.5px;
-            color: var(--ink-soft);
-            line-height: 1.6;
-        }
-
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 28px;
-            }
-
-            .group-note {
-                margin-left: 0;
-            }
-
-            .promise-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <meta name="description" content="Support and information for Talksy – Learn by Speaking.">
+    <title>Talksy — Support</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-    <header>
-        <svg class="wave" viewBox="0 0 720 160" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-            <path d="M0,100 C120,40 240,160 360,100 C480,40 600,160 720,100 L720,0 L0,0 Z" fill="#f4e4b8" />
-        </svg>
-        <div class="inner">
-            <span class="kicker">💬 Talksy Support</span>
-            <h1>Hi, how can we help?</h1>
-            <p class="lede">Everything you need to get the most out of Talksy — what it is, how to reach us, and where
-                to find the settings reference.</p>
-        </div>
-    </header>
+    <main class="container">
 
-    <div class="wrap">
+        <header class="hero">
+            <h1>Talksy Support</h1>
+            <p class="tagline">Learn by Speaking</p>
+        </header>
 
-        <!-- ABOUT -->
-        <section class="group" id="about">
-            <div class="group-head">
-                <div class="group-icon" style="background:var(--sun-soft);">👋</div>
-                <h2>What is Talksy?</h2>
+        <section>
+            <h2>What is Talksy?</h2>
+            <div class="section-content">
+                <p>
+                    Talksy is a simple language app built around one idea:
+                    if you want to speak a language, you should probably spend
+                    some time speaking it. So that's it.
+                </p>
+                <p>
+                    Nothing more, nothing less.
+                </p>
+            </div>
+        </section>
+
+        <section>
+
+            <h2>Contact</h2>
+            <div class="section-content">
+
+                <p>
+                    For questions, corrections, suggestions or bug reports, email:
+                </p>
+
+                <p>
+                    <a class="email" href="mailto:mcs.talksy@outlook.com">
+                        mcs.talksy@outlook.com
+                    </a>
+                </p>
+
+                <h3>Mistranslations or typos</h3>
+                <p>
+                    Something that reads oddly in English, French, German, Italian or Spanish?
+                    <br>
+                    Let me know the course, lesson, exercise and what looked wrong.
+                </p>
+
+                <h3>Bugs</h3>
+                <p>
+                    Tell me what you expected and what happened instead.
+                    <br>
+                    If you know it, please include your device model.
+                </p>
+
+                <h3>Suggestions</h3>
+                <p>
+                    Ideas for improving a feature, a confusing screen, or
+                    anything that felt clunky are always welcome.
+                </p>
+
             </div>
 
-            <div class="card">
-                <p class="card-title">Learn by speaking</p>
-                <p>Talksy is a simple language app built around one idea: if you want to speak a language, you should
-                    probably spend some time speaking it. So that's what Talksy does.</p>
-                <p>It's suitable for children, teenagers, adults, and anyone who has ever rehearsed a sentence perfectly
-                    in their head only to forget every word the moment an actual human turns up.</p>
-                <div class="about-langs">
-                    <span class="lang-pill">🇬🇧 English</span>
-                    <span class="lang-pill">🇫🇷 French</span>
-                    <span class="lang-pill">🇩🇪 German</span>
-                    <span class="lang-pill">🇮🇹 Italian</span>
-                    <span class="lang-pill">🇪🇸 Spanish</span>
-                </div>
-            </div>
+        </section>
 
-            <div class="card">
-                <p class="card-title">💯 Score yourself, then listen back</p>
-                <p class="small">Talksy will give you a score, but your own ears are still the best judge. Listen to
-                    your recording before moving on — if it doesn't sound right, try again.</p>
-            </div>
+        <section>
+            <h2>Scoring</h2>
+            <div class="section-content">
+                <p>
+                    Talksy uses your iPhone's dictation facility to listen to your
+                    response and compare it with the expected answer.
+                    Generally, you need to score <strong>more than 85%</strong>
+                    to move on to the next exercise.
+                </p>
 
-            <div class="card">
-                <p class="card-title">✍️ Write your own lessons</p>
-                <p class="small">Preparing for an oral exam? Write your own script, practise your answers, and listen
-                    back to them on the bus, while walking the dog, or lying in bed.</p>
-            </div>
+                <h3>A couple of points</h3>
 
-            <div class="card">
-                <p class="card-title">🎉 Completely free</p>
-                <div class="promise-grid">
-                    <div class="promise">🚫 No ads</div>
-                    <div class="promise">🔒 No tracking</div>
-                    <div class="promise">💳 No subscriptions</div>
-                    <div class="promise">⭐ No premium tier</div>
+                <ul>
+                    <li>
+                        <p>
+                            <strong>Listen to yourself.</strong>
+                            iPhone dictation is generally very good and can often
+                            correctly guess the expected response even when your
+                            actual pronunciation isn't that good.
+                        </p>
+                        <p>
+                            Make sure to listen to yourself before moving on.
+                            Your ears are the best judge.
+                            <br>
+                            You're doing this to learn, not just to pass!
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <strong>Sometimes dictation gets it wrong.</strong>
+                            Occasionally, iPhone dictation gets a response
+                            completely wrong and nothing you do seems to make
+                            a difference.
+                        </p>
+                        <p>
+                            Don't be concerned if you can't achieve 100% all
+                            the time.
+                            <br>
+                            If it sounds right, it probably is.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Lessons</h2>
+            <div class="section-content">
+                <p>
+                    Talksy includes lessons suitable for all ages from 12 to 90+.
+                    Hopefully, you'll find them useful — and maybe even a little
+                    amusing. They're a bit different.
+                </p>
+
+                <p>
+                    Vocabulary has been the driving force behind their creation.
+                    <br>
+                    I leave the grammar to the professionals.
+                </p>
+
+                <p>
+                    If you don't like the built-in lessons — or simply want to
+                    expand on them — it's easy to create your own.
+                    Check out the <strong>Customise</strong> menu option.
+                </p>
+
+                <p>
+                    If your language is supported by the iPhone, Talksy can use it.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Reference</h2>
+            <div class="section-content">
+                <div class="links">
+                    <a href="reference.html">General Reference</a>
+                    <a href="settings.html">Settings Reference</a>
+                    <a href="privacy.html">Privacy Policy</a>
                 </div>
             </div>
         </section>
 
-        <!-- SETTINGS -->
-        <section class="group" id="settings">
-            <div class="group-head">
-                <div class="group-icon" style="background:var(--violet-soft);">⚙️</div>
-                <h2>Settings reference</h2>
-            </div>
-            <p class="group-note">Not sure what a setting does, or what it's set to by default? It's all laid out here.
-            </p>
+        <footer>
+            <p>Talksy &mdash; Learn by Speaking</p>
+        </footer>
 
-            <a class="card linkout" href="talksy-settings.html">
-                <span>
-                    <span class="card-title">📖 Full settings guide</span>
-                    <p class="small" style="margin-top:4px;">Every setting in the app, grouped the way they appear on
-                        screen, with plain-language explanations and default values.</p>
-                </span>
-                <span class="arrow">→</span>
-            </a>
-        </section>
-
-        <!-- CONTACT -->
-        <section class="group" id="contact">
-            <div class="group-head">
-                <div class="group-icon" style="background:var(--mint-soft);">✉️</div>
-                <h2>Get in touch</h2>
-            </div>
-            <p class="group-note">Spotted something wrong, or have an idea? I read every message myself.</p>
-
-            <div class="card">
-                <a class="contact-btn" href="mailto:mcs.talksy@outlook.com">
-                    <span>mcs.talksy@outlook.com</span>
-                    <span class="arrow">→</span>
-                </a>
-            </div>
-
-            <div class="card">
-                <p class="card-title">What's worth writing in about</p>
-                <div class="topics">
-                    <div class="topic">
-                        <div class="dot-icon" style="background:var(--coral-soft);">🔤</div>
-                        <p><strong>Mistranslations or typos</strong>Spotted something that reads oddly in French,
-                            German, Italian, or Spanish? Let me know the course, lesson, and what looked wrong.</p>
-                    </div>
-                    <div class="topic">
-                        <div class="dot-icon" style="background:var(--accent-soft);">💡</div>
-                        <p><strong>Suggestions</strong>Ideas for improving a feature, a confusing screen, or anything
-                            that felt clunky.</p>
-                    </div>
-                    <div class="topic">
-                        <div class="dot-icon" style="background:var(--mint-soft);">📚</div>
-                        <p><strong>New course ideas</strong>A topic, scenario, or character you'd like to see a lesson
-                            built around.</p>
-                    </div>
-                    <div class="topic">
-                        <div class="dot-icon" style="background:var(--violet-soft);">🐞</div>
-                        <p><strong>Bugs</strong>What happened, what you expected instead, and your device model if you
-                            know it.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </div>
-
-    <footer>
-        <p>Talksy is a one-person project — thanks for your patience if a reply takes a little while. Every bit of
-            feedback genuinely shapes what gets built next.</p>
-    </footer>
-
+    </main>
 </body>
 
 </html>

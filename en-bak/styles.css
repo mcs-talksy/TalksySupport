@@ -1,0 +1,317 @@
+
+:root {
+    --bg: #fef49c;
+    --panel: #ffffff;
+    --ink: #2a2417;
+    --ink-soft: #7a6f52;
+    --line: #ecdfbd;
+    --accent: #b6791a;
+    --accent-soft: #f7e9cc;
+    --coral: #e2673f;
+    --coral-soft: #fbe9e2;
+    --sun: #f2a53c;
+    --sun-soft: #fdf1de;
+    --mint: #1f9d7c;
+    --mint-soft: #e2f6ef;
+    --violet: #7c5cbf;
+    --violet-soft: #efe8fa;
+    --sans: -apple-system, BlinkMacSystemFont, "Nunito", "Helvetica Neue", Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    padding-bottom: 90px;
+}
+
+.wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 22px;
+}
+
+a {
+    color: var(--accent);
+}
+
+header {
+    padding: 50px 22px 34px;
+    position: relative;
+    overflow: hidden;
+}
+
+header .wave {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    opacity: 0.5;
+}
+
+header .inner {
+    max-width: 720px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 100px;
+    padding: 6px 14px;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 18px;
+}
+
+h1 {
+    font-size: 36px;
+    margin: 0 0 12px;
+    letter-spacing: -0.02em;
+}
+
+.lede {
+    color: var(--ink-soft);
+    font-size: 16px;
+    max-width: 54ch;
+    margin: 0 0 4px;
+    line-height: 1.6;
+}
+
+section.group {
+    margin-top: 36px;
+}
+
+.group-head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 6px;
+}
+
+.group-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex: 0 0 auto;
+}
+
+section.group h2 {
+    font-size: 21px;
+    margin: 0;
+}
+
+.group-note {
+    color: var(--ink-soft);
+    font-size: 14px;
+    margin: 0 0 16px 50px;
+    max-width: 58ch;
+}
+
+.card {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    margin-bottom: 10px;
+    padding: 16px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.card p {
+    margin: 0;
+    font-size: 14.5px;
+    color: var(--ink);
+    line-height: 1.6;
+}
+
+.card p.small {
+    font-size: 13.5px;
+    color: var(--ink-soft);
+}
+
+.card-title {
+    font-weight: 800;
+    font-size: 15.5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.badges {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.badge {
+    font-size: 10.5px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 3px 8px;
+    border-radius: 100px;
+}
+
+.badge.mint {
+    color: var(--mint);
+    background: var(--mint-soft);
+}
+
+.badge.coral {
+    color: var(--coral);
+    background: var(--coral-soft);
+}
+
+.badge.accent {
+    color: var(--accent);
+    background: var(--accent-soft);
+}
+
+/* About card */
+.about-langs {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-top: 2px;
+}
+
+.lang-pill {
+    font-size: 12.5px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 100px;
+    background: var(--accent-soft);
+    color: var(--accent);
+}
+
+/* Contact card */
+.contact-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    background: var(--accent-soft);
+    border-radius: 12px;
+    padding: 12px 14px;
+    text-decoration: none;
+    color: var(--ink);
+    font-weight: 700;
+    font-size: 14.5px;
+}
+
+.contact-btn .arrow {
+    color: var(--accent);
+    font-size: 15px;
+}
+
+/* Topic list for "what to write in" */
+.topics {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 2px;
+}
+
+.topic {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.topic .dot-icon {
+    width: 26px;
+    height: 26px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    flex: 0 0 auto;
+    margin-top: 1px;
+}
+
+.topic p {
+    font-size: 14px;
+}
+
+.topic strong {
+    display: block;
+    font-size: 14.5px;
+    margin-bottom: 1px;
+}
+
+/* Link-out row */
+.linkout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--ink);
+}
+
+.linkout .arrow {
+    color: var(--accent);
+    font-size: 15px;
+    flex: 0 0 auto;
+}
+
+/* Promise strip */
+.promise-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    margin-top: 2px;
+}
+
+.promise {
+    background: var(--mint-soft);
+    border-radius: 12px;
+    padding: 10px 12px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #146a52;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+footer {
+    max-width: 720px;
+    margin: 60px auto 0;
+    padding: 24px 22px 0;
+    border-top: 1px solid var(--line);
+    font-size: 13.5px;
+    color: var(--ink-soft);
+    line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    .group-note {
+        margin-left: 0;
+    }
+
+    .promise-grid {
+        grid-template-columns: 1fr;
+    }
+}
