@@ -52,20 +52,20 @@ body {
 
 .tagline {
     margin: 6px 0 0;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 500;
 }
 
 section {
     margin-bottom: 16px;
-    padding: 0 12px 12px;
+    padding: 0 10px 10px;
     background: var(--talksy-pale-yellow);
     border-radius: 16px;
 }
 
 section h2 {
     margin: 0;
-    padding: 12px 8px 8px;
+    padding: 10px 10px 8px;
     font-size: 1rem;
     line-height: 1.15;
     font-weight: 700;
@@ -73,7 +73,7 @@ section h2 {
 }
 
 .section-content {
-    padding: 12px;
+    padding: 10px;
     background: var(--talksy-white);
     border-radius: 16px;
 }
