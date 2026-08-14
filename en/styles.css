@@ -106,9 +106,26 @@ section h3 {
     gap: 8px;
 }
 
+       .setting-header {
+            display: flex;
+            justify-content: space-between;
+            /* Pushes text left, badge right */
+            align-items: center;
+            /* Vertically centers them */
+            width: 100%;
+            /* Ensures full width for spacing */
+        }
+
 .setting-name {
     font-weight: 600;
     font-size: 1rem;
+}
+
+.setting-body p {
+    margin: 0;
+    font-size: 14.5px;
+    color: var(--ink);
+    line-height: 1.55;
 }
 
 .badges {
