@@ -1,357 +1,391 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Talksy — Settings Guide</title>
-<style>
-  :root {
-    --bg: #fbf3e0;
-    --panel: #ffffff;
-    --ink: #2a2417;
-    --ink-soft: #7a6f52;
-    --line: #ecdfbd;
-    --accent: #b6791a;
-    --accent-soft: #f7e9cc;
-    --coral: #e2673f;
-    --coral-soft: #fbe9e2;
-    --sun: #f2a53c;
-    --sun-soft: #fdf1de;
-    --mint: #1f9d7c;
-    --mint-soft: #e2f6ef;
-    --violet: #7c5cbf;
-    --violet-soft: #efe8fa;
-    --sans: -apple-system, BlinkMacSystemFont, "Nunito", "Helvetica Neue", Arial, sans-serif;
-  }
-  * { box-sizing: border-box; }
-  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--sans); padding-bottom: 100px; }
-  .wrap { max-width: 720px; margin: 0 auto; padding: 0 22px; }
-
-  header {
-    padding: 50px 22px 34px;
-    position: relative;
-    overflow: hidden;
-  }
-  header .wave {
-    position: absolute; inset: 0; z-index: 0; opacity: 0.5;
-  }
-  header .inner { max-width: 720px; margin: 0 auto; position: relative; z-index: 1; }
-  .kicker {
-    display: inline-flex; align-items: center; gap: 8px;
-    background: var(--panel); border: 1px solid var(--line); border-radius: 100px;
-    padding: 6px 14px; font-size: 13px; font-weight: 700; color: var(--accent); margin-bottom: 18px;
-  }
-  h1 { font-size: 36px; margin: 0 0 12px; letter-spacing: -0.02em; }
-  .lede { color: var(--ink-soft); font-size: 16px; max-width: 54ch; margin: 0 0 20px; line-height: 1.6; }
-  .legend { display: flex; gap: 16px; flex-wrap: wrap; font-size: 13.5px; color: var(--ink-soft); font-weight: 600; }
-  .legend span { display: inline-flex; align-items: center; gap: 7px; }
-  .pill { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
-  .pill.std { background: var(--accent); }
-  .pill.adv { background: var(--coral); }
-
-  .jumpbar {
-    display: flex; gap: 8px; overflow-x: auto; padding: 4px 22px 20px;
-    position: sticky; top: 0; background: var(--bg); z-index: 5; -webkit-overflow-scrolling: touch;
-  }
-  .jumpbar a {
-    flex: 0 0 auto; text-decoration: none; font-weight: 700; font-size: 13.5px;
-    padding: 8px 14px; border-radius: 100px; white-space: nowrap; border: 1px solid var(--line); color: var(--ink);
-    background: var(--panel);
-  }
-
-  section.group { margin-top: 36px; }
-  .group-head { display: flex; align-items: center; gap: 12px; margin-bottom: 6px; }
-  .group-icon {
-    width: 38px; height: 38px; border-radius: 12px; display: flex; align-items: center; justify-content: center;
-    font-size: 18px; flex: 0 0 auto;
-  }
-  section.group h2 { font-size: 21px; margin: 0; }
-  .group-note { color: var(--ink-soft); font-size: 14px; margin: 0 0 16px 50px; max-width: 58ch; }
-
-  .setting {
-    background: var(--panel); border: 1px solid var(--line); border-radius: 18px;
-    margin-bottom: 10px; padding: 16px 18px; display: flex; flex-direction: column; gap: 8px;
-  }
-
-  .setting-name { font-weight: 800; font-size: 15.5px; }
-  .badges { display: flex; gap: 6px; flex-wrap: wrap; }
-  .badge {
-    font-size: 10.5px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em;
-    padding: 3px 8px; border-radius: 100px;
-  }
-  .badge.adv { color: var(--coral); background: var(--coral-soft); }
-  .badge.default { color: var(--accent); background: var(--accent-soft); font-weight: 700; text-transform: none; letter-spacing: 0; }
-
-  .setting-body p { margin: 0; font-size: 14.5px; color: var(--ink); line-height: 1.55; }
-
-  /* waveform decoration for interactive section */
-  .waveform { display: flex; align-items: flex-end; gap: 2px; height: 16px; flex: 0 0 auto; }
-  .waveform span { width: 3px; background: var(--violet); border-radius: 2px; display: inline-block; }
-
-  footer {
-    max-width: 720px; margin: 60px auto 0; padding: 24px 22px 0; border-top: 1px solid var(--line);
-    font-size: 13.5px; color: var(--ink-soft);
-  }
-
-  @media (max-width: 600px) {
-    h1 { font-size: 28px; }
-    .group-note { margin-left: 0; }
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Support and information for Talksy - Learn by Speaking.">
+    <title>Talksy — Support</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-<header>
-  <svg class="wave" viewBox="0 0 720 160" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-    <path d="M0,100 C120,40 240,160 360,100 C480,40 600,160 720,100 L720,0 L0,0 Z" fill="#f4e4b8"/>
-  </svg>
-  <div class="inner">
-    <span class="kicker">💬 Talksy Support</span>
-    <h1>Settings, in plain speech</h1>
-    <p class="lede">What every setting does, and what it's set to out of the box. Coral-tagged settings are tucked under <strong>Show Advanced</strong> at the bottom of the Settings screen.</p>
-    <div class="legend">
-      <span><span class="pill std"></span> Always visible</span>
-      <span><span class="pill adv"></span> Show Advanced</span>
-    </div>
-  </div>
-</header>
+    <main class="container">
 
-<div class="jumpbar">
-  <a href="#appearance">🎨 Appearance</a>
-  <a href="#lesson">📚 Lessons</a>
-  <a href="#revision">🔁 Revision</a>
-  <a href="#interactive">🎙️ Interactive</a>
-  <a href="#directories">📁 Directories</a>
-  <a href="#debug">🛠️ Debug</a>
-</div>
+        <header class="hero">
+            <h1>Talksy Settings</h1>
+            <p class="tagline">Learn by Speaking</p>
+        </header>
 
-<div class="wrap">
+        <section>
 
-  <section class="group" id="appearance">
-    <div class="group-head"><div class="group-icon" style="background:var(--sun-soft);">🎨</div><h2>Appearance</h2></div>
-    <p class="group-note">How Talksy looks — theme, colours, and the lesson map.</p>
+            <h2>Appearance</h2>
 
-    <div class="setting">
-      <span class="setting-name">App Theme</span><span class="badges"><span class="badge default">Talksy</span></span>
-      <div class="setting-body"><p>Uses Talksy's own colour palette by default. Choose <strong>System</strong> instead to follow your device's Light/Dark mode.</p></div>
-    </div>
+            <div class="setting">
+                <span class="setting-name">App Theme</span>
+                <span class="badges">
+                    <span class="badge default">Talksy</span>
+                </span>
+                <div class="setting-body">
+                    <p>Uses Talksy's own colour palette by default. Choose <strong>System</strong> instead to follow
+                        your device's Light/Dark mode.</p>
+                </div>
+            </div>
 
-    <div class="setting">
-      <span class="setting-name">Button Style</span><span class="badges"><span class="badge default">Image Card</span><span class="badge adv">Advanced</span></span>
-      <div class="setting-body"><p>Changes the visual style of buttons throughout the app.</p></div>
-    </div>
+            <div class="setting">
+                <span class="setting-name">Button Style</span>
+                <span class="badges">
+                    <span class="badge default">Image Card</span>
+                </span>
+                <div class="setting-body">
+                    <p>Changes the visual style of buttons throughout the app.</p>
+                </div>
+            </div>
 
-    <div class="setting">
-      <span class="setting-name">Background Color</span><span class="badges"><span class="badge default">Yellow</span></span>
-      <div class="setting-body"><p>Sets a custom background colour. Only appears when App Theme is set to <strong>Talksy</strong>.</p></div>
-    </div>
+            <div class="setting">
+                <span class="setting-name">Background Color</span>
+                <span class="badges"><span class="badge default">Yellow</span></span>
+                <div class="setting-body">
+                    <p>Sets a custom background colour. Only appears when App Theme is set to <strong>Talksy</strong>.
+                    </p>
+                </div>
+            </div>
 
-    <div class="setting">
-      <span class="setting-name">Navigation Background</span><span class="badges"><span class="badge default">Dark Gloss</span><span class="badge adv">Advanced</span></span>
-      <div class="setting-body"><p>Backdrop image behind the 3D lesson map — Dark Gloss or Red/White Checkerboard.</p></div>
-    </div>
+            <div class="setting">
+                <span class="setting-name">Navigation Background</span><span class="badges"><span
+                        class="badge default">Dark Gloss</span></span>
+                <div class="setting-body">
+                    <p>Backdrop image behind the 3D lesson map — Dark Gloss or Red/White Checkerboard.</p>
+                </div>
+            </div>
 
-    <div class="setting">
-      <span class="setting-name">Navigation Selection</span><span class="badges"><span class="badge default">Pulsating</span><span class="badge adv">Advanced</span></span>
-      <div class="setting-body"><p>How the current lesson is highlighted on the map. <strong>Glow</strong> is the energy-efficient option and uses less battery.</p></div>
-    </div>
+            <div class="setting">
+                <span class="setting-name">Navigation Selection</span><span class="badges"><span
+                        class="badge default">Pulsating</span></span>
+                <div class="setting-body">
+                    <p>How the current lesson is highlighted on the map. <strong>Glow</strong> is the energy-efficient
+                        option and uses less battery.</p>
+                </div>
+            </div>
 
-    <div class="setting">
-      <span class="setting-name">Navigation Token Text</span><span class="badges"><span class="badge default">On</span><span class="badge adv">Advanced</span></span>
-      <div class="setting-body"><p>Shows text labels on the lesson map's tokens. Turning this off can also save a little battery.</p></div>
-    </div>
+            <div class="setting">
+                <span class="setting-name">Navigation Token Text</span><span class="badges"><span
+                        class="badge default">On</span></span>
+                <div class="setting-body">
+                    <p>Shows text labels on the lesson map's tokens. Turning this off can also save a little battery.
+                    </p>
+                </div>
+            </div>
 
-    <div class="setting">
-      <span class="setting-name">Show Welcome Screen</span><span class="badges"><span class="badge default">On</span></span>
-      <div class="setting-body"><p>Shows the welcome/onboarding screen when Talksy launches.</p></div>
-    </div>
-  </section>
+            <div class="setting">
+                <span class="setting-name">Show Welcome Screen</span><span class="badges"><span
+                        class="badge default">On</span></span>
+                <div class="setting-body">
+                    <p>Shows the welcome/onboarding screen when Talksy launches.</p>
+                </div>
+            </div>
 
-  <section class="group" id="lesson">
-    <div class="group-head"><div class="group-icon" style="background:var(--mint-soft);">📚</div><h2>Lesson Configuration</h2></div>
-    <p class="group-note">Scoring, playback, and what's shown on screen during a lesson.</p>
+        </section>
 
-    <div class="setting">
-      <span class="setting-name">Speaking Accuracy</span><span class="badges"><span class="badge default">85%</span></span>
-      <div class="setting-body"><p>The minimum match percentage your spoken answer needs to reach for a speaking exercise to be marked correct.</p></div>
-    </div>
+        <section>
 
-    <div class="setting">
-      <span class="setting-name">Speaking Accuracy (Vocab)</span><span class="badges"><span class="badge default">50%</span></span>
-      <div class="setting-body"><p>Same idea as Speaking Accuracy, but for vocabulary practice exercises.</p></div>
-    </div>
+            <h2>Lesson Configuration</h2>
+            <p class="group-note">Scoring, playback, and what's shown on screen during a lesson.</p>
 
-    <div class="setting">
-      <span class="setting-name">Speaking Accuracy (Junior)</span><span class="badges"><span class="badge default">50%</span><span class="badge adv">Advanced</span></span>
-      <div class="setting-body"><p>A separate, more forgiving accuracy threshold used specifically for younger learners.</p></div>
-    </div>
+            <div class="setting">
+                <span class="setting-name">Speaking Accuracy</span>
+                <span class="badges">
+                    <span class="badge default">85%</span>
+                </span>
+                <div class="setting-body">
+                    <p>The minimum match percentage your spoken answer needs to reach for a speaking exercise to be
+                        marked correct.</p>
+                </div>
+            </div>
 
-    <div class="setting">
-      <span class="setting-name">Max Exercise Failures</span><span class="badges"><span class="badge default">5</span></span>
-      <div class="setting-body"><p>How many unsuccessful attempts are allowed on an exercise before the sad cat shows up and Talksy moves on.</p></div>
-    </div>
+            <div class="setting">
+                <span class="setting-name">Speaking Accuracy (Vocab)</span><span class="badges"><span
+                        class="badge default">50%</span></span>
+                <div class="setting-body">
+                    <p>Same idea as Speaking Accuracy, but for vocabulary practice exercises.</p>
+                </div>
+            </div>
 
-    <div class="setting">
-      <span class="setting-name">Playback Rate</span><span class="badges"><span class="badge default">50%</span><span class="badge adv">Advanced</span></span>
-      <div class="setting-body"><p>Adjusts the speed of spoken narration. Slower is easier — turn it down for beginners or tricky sounds.</p></div>
-    </div>
+            <div class="setting">
+                <span class="setting-name">Speaking Accuracy (Junior)</span><span class="badges"><span
+                        class="badge default">50%</span></span>
+                <div class="setting-body">
+                    <p>A separate, more forgiving accuracy threshold used specifically for younger learners.</p>
+                </div>
+            </div>
 
-    <div class="setting">
-      <span class="setting-name">Preferred Voice</span><span class="badges"><span class="badge default">Prefer Gender</span><span class="badge adv">Advanced</span></span>
-      <div class="setting-body"><p>Chooses which text-to-speech voice Talksy uses: matched to gender, matched to quality, or the device default.</p></div>
-    </div>
+            <div class="setting">
+                <span class="setting-name">Max Exercise Failures</span><span class="badges"><span
+                        class="badge default">5</span></span>
+                <div class="setting-body">
+                    <p>How many unsuccessful attempts are allowed on an exercise before the sad cat shows up and Talksy
+                        moves on.</p>
+                </div>
+            </div>
 
-    <div class="setting">
-      <span class="setting-name">Auto Play Exercises</span><span class="badges"><span class="badge default">On</span></span>
-      <div class="setting-body"><p>Automatically plays the audio for an exercise as soon as it opens.</p></div>
-    </div>
+            <div class="setting">
+                <span class="setting-name">Playback Rate</span><span class="badges"><span
+                        class="badge default">50%</span></span>
+                <div class="setting-body">
+                    <p>Adjusts the speed of spoken narration. Slower is easier — turn it down for beginners or tricky
+                        sounds.</p>
+                </div>
+            </div>
 
-    <div class="setting">
-      <span class="setting-name">Auto Playback Recordings</span><span class="badges"><span class="badge default">On</span></span>
-      <div class="setting-body"><p>Automatically plays back your own recording after you finish speaking.</p></div>
-    </div>
+            <div class="setting">
+                <span class="setting-name">Preferred Voice</span><span class="badges"><span class="badge default">Prefer
+                        Gender</span></span>
+                <div class="setting-body">
+                    <p>Chooses which text-to-speech voice Talksy uses: matched to gender, matched to quality, or the
+                        device default.</p>
+                </div>
+            </div>
 
-    <div class="setting">
-      <span class="setting-name">Show Native Text</span><span class="badges"><span class="badge default">On</span><span class="badge adv">Advanced</span></span>
-      <div class="setting-body"><p>Shows the text of an exercise in your native language.</p></div>
-    </div>
+            <div class="setting">
+                <span class="setting-name">Auto Play Exercises</span><span class="badges"><span
+                        class="badge default">On</span></span>
+                <div class="setting-body">
+                    <p>Automatically plays the audio for an exercise as soon as it opens.</p>
+                </div>
+            </div>
 
-    <div class="setting">
-      <span class="setting-name">Show Learning Text</span><span class="badges"><span class="badge default">On</span><span class="badge adv">Advanced</span></span>
-      <div class="setting-body"><p>Shows the text of an exercise in the language you're learning.</p></div>
-    </div>
+            <div class="setting">
+                <span class="setting-name">Auto Playback Recordings</span><span class="badges"><span
+                        class="badge default">On</span></span>
+                <div class="setting-body">
+                    <p>Automatically plays back your own recording after you finish speaking.</p>
+                </div>
+            </div>
 
-    <div class="setting">
-      <span class="setting-name">Show Attempts Count</span><span class="badges"><span class="badge default">On</span><span class="badge adv">Advanced</span></span>
-      <div class="setting-body"><p>Displays how many attempts you have left on the current exercise.</p></div>
-    </div>
+            <div class="setting">
+                <span class="setting-name">Show Native Text</span><span class="badges"><span
+                        class="badge default">On</span></span>
+                <div class="setting-body">
+                    <p>Shows the text of an exercise in your native language.</p>
+                </div>
+            </div>
 
-    <div class="setting">
-      <span class="setting-name">Allow Exercise Skipping</span><span class="badges"><span class="badge default">Off</span><span class="badge adv">Advanced</span></span>
-      <div class="setting-body"><p>Lets you skip past an exercise without completing it.</p></div>
-    </div>
+            <div class="setting">
+                <span class="setting-name">Show Learning Text</span><span class="badges"><span
+                        class="badge default">On</span></span>
+                <div class="setting-body">
+                    <p>Shows the text of an exercise in the language you're learning.</p>
+                </div>
+            </div>
 
-    <div class="setting">
-      <span class="setting-name">Allow Vocabulary Skipping</span><span class="badges"><span class="badge default">On</span><span class="badge adv">Advanced</span></span>
-      <div class="setting-body"><p>Lets you skip past a vocabulary item without completing it.</p></div>
-    </div>
-  </section>
+            <div class="setting">
+                <span class="setting-name">Show Attempts Count</span><span class="badges"><span
+                        class="badge default">On</span></span>
+                <div class="setting-body">
+                    <p>Displays how many attempts you have left on the current exercise.</p>
+                </div>
+            </div>
 
-  <section class="group" id="revision">
-    <div class="group-head"><div class="group-icon" style="background:var(--accent-soft);">🔁</div><h2>Auto Play — Revision</h2></div>
-    <p class="group-note">Hands-free playback for reviewing a lesson passively, without speaking along.</p>
+            <div class="setting">
+                <span class="setting-name">Allow Exercise Skipping</span><span class="badges"><span
+                        class="badge default">Off</span></span>
+                <div class="setting-body">
+                    <p>Lets you skip past an exercise without completing it.</p>
+                </div>
+            </div>
 
-    <div class="setting">
-      <span class="setting-name">Announce Course</span><span class="badges"><span class="badge default">Off</span><span class="badge adv">Advanced</span></span>
-      <div class="setting-body"><p>Plays a short spoken introduction for the course before playback begins.</p></div>
-    </div>
+            <div class="setting">
+                <span class="setting-name">Allow Vocabulary Skipping</span><span class="badges"><span
+                        class="badge default">On</span></span>
+                <div class="setting-body">
+                    <p>Lets you skip past a vocabulary item without completing it.</p>
+                </div>
+            </div>
+        </section>
 
-    <div class="setting">
-      <span class="setting-name">Announce Lesson</span><span class="badges"><span class="badge default">On</span><span class="badge adv">Advanced</span></span>
-      <div class="setting-body"><p>Plays a short spoken introduction for each lesson before it begins.</p></div>
-    </div>
+       <section class="group" id="revision">
+            <div class="group-head">
+                <div class="group-icon" style="background:var(--accent-soft);">🔁</div>
+                <h2>Auto Play — Revision</h2>
+            </div>
+            <p class="group-note">Hands-free playback for reviewing a lesson passively, without speaking along.</p>
 
-    <div class="setting">
-      <span class="setting-name">Translate Exercise</span><span class="badges"><span class="badge default">On</span></span>
-      <div class="setting-body"><p>Plays a translation of each exercise alongside the original.</p></div>
-    </div>
+            <div class="setting">
+                <span class="setting-name">Announce Course</span><span class="badges"><span
+                        class="badge default">Off</span></span>
+                <div class="setting-body">
+                    <p>Plays a short spoken introduction for the course before playback begins.</p>
+                </div>
+            </div>
 
-    <div class="setting">
-      <span class="setting-name">Repeat Slowly</span><span class="badges"><span class="badge default">On</span></span>
-      <div class="setting-body"><p>Plays a slowed-down, word-by-word repetition of each exercise.</p></div>
-    </div>
+            <div class="setting">
+                <span class="setting-name">Announce Lesson</span><span class="badges"><span
+                        class="badge default">On</span></span>
+                <div class="setting-body">
+                    <p>Plays a short spoken introduction for each lesson before it begins.</p>
+                </div>
+            </div>
 
-    <div class="setting">
-      <span class="setting-name">Repeat Normally</span><span class="badges"><span class="badge default">Off</span></span>
-      <div class="setting-body"><p>Plays a normal-speed repetition of each exercise.</p></div>
-    </div>
+            <div class="setting">
+                <span class="setting-name">Translate Exercise</span><span class="badges"><span
+                        class="badge default">On</span></span>
+                <div class="setting-body">
+                    <p>Plays a translation of each exercise alongside the original.</p>
+                </div>
+            </div>
 
-    <div class="setting">
-      <span class="setting-name">Beep Between Exercises</span><span class="badges"><span class="badge default">Off</span><span class="badge adv">Advanced</span></span>
-      <div class="setting-body"><p>Plays a short beep between exercises — a useful audio cue if you're not looking at the screen.</p></div>
-    </div>
+            <div class="setting">
+                <span class="setting-name">Repeat Slowly</span><span class="badges"><span
+                        class="badge default">On</span></span>
+                <div class="setting-body">
+                    <p>Plays a slowed-down, word-by-word repetition of each exercise.</p>
+                </div>
+            </div>
 
-    <div class="setting">
-      <span class="setting-name">Pause Breaks</span><span class="badges"><span class="badge default">2s</span><span class="badge adv">Advanced</span></span>
-      <div class="setting-body"><p>Length of the pause inserted between exercises during hands-free playback.</p></div>
-    </div>
+            <div class="setting">
+                <span class="setting-name">Repeat Normally</span><span class="badges"><span
+                        class="badge default">Off</span></span>
+                <div class="setting-body">
+                    <p>Plays a normal-speed repetition of each exercise.</p>
+                </div>
+            </div>
 
-    <div class="setting">
-      <span class="setting-name">Repeat Count</span><span class="badges"><span class="badge default">1</span><span class="badge adv">Advanced</span></span>
-      <div class="setting-body"><p>How many times each exercise is repeated during hands-free playback.</p></div>
-    </div>
-  </section>
+            <div class="setting">
+                <span class="setting-name">Beep Between Exercises</span><span class="badges"><span
+                        class="badge default">Off</span></span>
+                <div class="setting-body">
+                    <p>Plays a short beep between exercises — a useful audio cue if you're not looking at the screen.
+                    </p>
+                </div>
+            </div>
 
-  <section class="group" id="interactive">
-    <div class="group-head">
-      <div class="group-icon" style="background:var(--violet-soft);">🎙️</div>
-      <h2>Auto Play — Interactive</h2>
-      <div class="waveform" aria-hidden="true">
-        <span style="height:6px;"></span><span style="height:14px;"></span><span style="height:9px;"></span>
-        <span style="height:16px;"></span><span style="height:7px;"></span><span style="height:12px;"></span>
-      </div>
-    </div>
-    <p class="group-note">Hands-free mode where Talksy prompts you and waits for a spoken response.</p>
+            <div class="setting">
+                <span class="setting-name">Pause Breaks</span><span class="badges"><span
+                        class="badge default">2s</span></span>
+                <div class="setting-body">
+                    <p>Length of the pause inserted between exercises during hands-free playback.</p>
+                </div>
+            </div>
 
-    <div class="setting">
-      <span class="setting-name">Enable Interactive Mode</span><span class="badges"><span class="badge default">Off</span><span class="badge adv">Advanced</span></span>
-      <div class="setting-body"><p>Turns on interactive hands-free playback, where Talksy waits for your spoken response before continuing.</p></div>
-    </div>
+            <div class="setting">
+                <span class="setting-name">Repeat Count</span><span class="badges"><span
+                        class="badge default">1</span></span>
+                <div class="setting-body">
+                    <p>How many times each exercise is repeated during hands-free playback.</p>
+                </div>
+            </div>
+        </section>
 
-    <div class="setting">
-      <span class="setting-name">Translate Exercise</span><span class="badges"><span class="badge default">On</span><span class="badge adv">Advanced</span></span>
-      <div class="setting-body"><p>Plays a translation of each exercise before prompting you to respond.</p></div>
-    </div>
+        <section class="group" id="interactive">
+            <div class="group-head">
+                <div class="group-icon" style="background:var(--violet-soft);">🎙️</div>
+                <h2>Auto Play — Interactive</h2>
+                <div class="waveform" aria-hidden="true">
+                    <span style="height:6px;"></span><span style="height:14px;"></span><span style="height:9px;"></span>
+                    <span style="height:16px;"></span><span style="height:7px;"></span><span
+                        style="height:12px;"></span>
+                </div>
+            </div>
+            <p class="group-note">Hands-free mode where Talksy prompts you and waits for a spoken response.</p>
 
-    <div class="setting">
-      <span class="setting-name">Repeat Slowly</span><span class="badges"><span class="badge default">On</span><span class="badge adv">Advanced</span></span>
-      <div class="setting-body"><p>Plays a slowed-down repetition as part of the interactive prompt.</p></div>
-    </div>
+            <div class="setting">
+                <span class="setting-name">Enable Interactive Mode</span><span class="badges"><span
+                        class="badge default">Off</span></span>
+                <div class="setting-body">
+                    <p>Turns on interactive hands-free playback, where Talksy waits for your spoken response before
+                        continuing.</p>
+                </div>
+            </div>
 
-    <div class="setting">
-      <span class="setting-name">Repeat Normally</span><span class="badges"><span class="badge default">Off</span><span class="badge adv">Advanced</span></span>
-      <div class="setting-body"><p>Plays a normal-speed repetition as part of the interactive prompt.</p></div>
-    </div>
+            <div class="setting">
+                <span class="setting-name">Translate Exercise</span><span class="badges"><span
+                        class="badge default">On</span></span>
+                <div class="setting-body">
+                    <p>Plays a translation of each exercise before prompting you to respond.</p>
+                </div>
+            </div>
 
-    <div class="setting">
-      <span class="setting-name">Failure Policy</span><span class="badges"><span class="badge default">Repeat Slowly</span><span class="badge adv">Advanced</span></span>
-      <div class="setting-body"><p>What Talksy does after a single unsuccessful attempt.</p></div>
-    </div>
+            <div class="setting">
+                <span class="setting-name">Repeat Slowly</span><span class="badges"><span
+                        class="badge default">On</span></span>
+                <div class="setting-body">
+                    <p>Plays a slowed-down repetition as part of the interactive prompt.</p>
+                </div>
+            </div>
 
-    <div class="setting">
-      <span class="setting-name">Max Failure Policy</span><span class="badges"><span class="badge default">Skip</span><span class="badge adv">Advanced</span></span>
-      <div class="setting-body"><p>What Talksy does once you've reached the maximum number of failed attempts.</p></div>
-    </div>
+            <div class="setting">
+                <span class="setting-name">Repeat Normally</span><span class="badges"><span
+                        class="badge default">Off</span></span>
+                <div class="setting-body">
+                    <p>Plays a normal-speed repetition as part of the interactive prompt.</p>
+                </div>
+            </div>
 
-    <div class="setting">
-      <span class="setting-name">Timeout</span><span class="badges"><span class="badge default">15s</span><span class="badge adv">Advanced</span></span>
-      <div class="setting-body"><p>How long Talksy waits for a spoken response before treating the attempt as missed.</p></div>
-    </div>
-  </section>
+            <div class="setting">
+                <span class="setting-name">Failure Policy</span><span class="badges"><span class="badge default">Repeat
+                        Slowly</span></span>
+                <div class="setting-body">
+                    <p>What Talksy does after a single unsuccessful attempt.</p>
+                </div>
+            </div>
 
-  <section class="group" id="directories">
-    <div class="group-head"><div class="group-icon" style="background:var(--sun-soft);">📁</div><h2>External Directories</h2></div>
-    <p class="group-note">For content authors working on custom course material — most learners won't need this.</p>
+            <div class="setting">
+                <span class="setting-name">Max Failure Policy</span><span class="badges"><span
+                        class="badge default">Skip</span></span>
+                <div class="setting-body">
+                    <p>What Talksy does once you've reached the maximum number of failed attempts.</p>
+                </div>
+            </div>
 
-    <div class="setting">
-      <span class="setting-name">External Directories</span><span class="badges"><span class="badge default">None</span><span class="badge adv">Advanced</span></span>
-      <div class="setting-body"><p>Add folders on your device containing custom course content for Talksy to load, and remove them again when you're done.</p></div>
-    </div>
-  </section>
+            <div class="setting">
+                <span class="setting-name">Timeout</span><span class="badges"><span
+                        class="badge default">15s</span></span>
+                <div class="setting-body">
+                    <p>How long Talksy waits for a spoken response before treating the attempt as missed.</p>
+                </div>
+            </div>
+        </section>
 
-  <section class="group" id="debug">
-    <div class="group-head"><div class="group-icon" style="background:var(--coral-soft);">🛠️</div><h2>Debug</h2></div>
-    <p class="group-note">Internal tools used during development and content review.</p>
+        <section class="group" id="directories">
+            <div class="group-head">
+                <div class="group-icon" style="background:var(--sun-soft);">📁</div>
+                <h2>External Directories</h2>
+            </div>
+            <p class="group-note">For content authors working on custom course material — most learners won't need this.
+            </p>
 
-    <div class="setting">
-      <span class="setting-name">Proof Mode</span><span class="badges"><span class="badge default">Off</span><span class="badge adv">Advanced</span></span>
-      <div class="setting-body"><p>A review aid used while proofreading lesson content — not needed for normal use of the app.</p></div>
-    </div>
-  </section>
+            <div class="setting">
+                <span class="setting-name">External Directories</span><span class="badges"><span
+                        class="badge default">None</span></span>
+                <div class="setting-body">
+                    <p>Add folders on your device containing custom course content for Talksy to load, and remove them
+                        again when you're done.</p>
+                </div>
+            </div>
+        </section>
 
-</div>
+        <section class="group" id="debug">
+            <div class="group-head">
+                <div class="group-icon" style="background:var(--coral-soft);">🛠️</div>
+                <h2>Debug</h2>
+            </div>
+            <p class="group-note">Internal tools used during development and content review.</p>
 
-<footer><p>Can't find what you're looking for? Get in touch and we'll help you out.</p></footer>
+            <div class="setting">
+                <span class="setting-name">Proof Mode</span><span class="badges"><span
+                        class="badge default">Off</span></span>
+                <div class="setting-body">
+                    <p>A review aid used while proofreading lesson content — not needed for normal use of the app.</p>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <p>Talksy &mdash; Learn by Speaking</p>
+        </footer>
+
+    </main>
 
 </body>
+
 </html>

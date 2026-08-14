@@ -5,6 +5,14 @@
     --talksy-text: #000000;
     --talksy-muted: #5f5f5f;
     --talksy-white: #ffffff;
+
+    --accent: #b6791a;
+    --accent-soft: #f7e9cc;
+    --coral: #e2673f;
+    --coral-soft: #fbe9e2;
+    --mint: #1f9d7c;
+    --mint-soft: #e2f6ef;
+
     --max-width: 760px;
 }
 
@@ -53,7 +61,8 @@ body {
 .tagline {
     margin: 6px 0 0;
     color: rgba(0, 0, 0, 0.65);
-    font-size: 0.9rem;;
+    font-size: 0.9rem;
+    ;
     font-weight: 500;
 }
 
@@ -73,10 +82,61 @@ section h2 {
     padding: 10px 10px 8px;
 }
 
+section h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.25;
+    margin: 0px 0 8px;
+}
+
 .section-content {
     background: var(--talksy-white);
     border-radius: 16px;
     padding: 10px;
+}
+
+.setting {
+    background: var(--talksy-white);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    margin-bottom: 10px;
+    padding: 16px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.setting-name {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.badges {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.badge {
+    font-size: 10.5px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 3px 8px;
+    border-radius: 100px;
+}
+
+.badge.adv {
+    color: var(--coral);
+    background: var(--coral-soft);
+}
+
+.badge.default {
+    color: var(--mint);
+    background: var(--mint-soft);
+    font-weight: 700;
+    text-transform: none;
+    letter-spacing: 0;
 }
 
 p {
