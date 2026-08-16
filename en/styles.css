@@ -21,7 +21,7 @@
 }
 
 html {
-    font-size: 16px;
+    font-size: 14.5px;
 }
 
 body {
@@ -68,7 +68,7 @@ body {
 
 section {
     background: var(--talksy-pale-yellow);
-    border-radius: 16px;
+    border-radius: 12px;
     margin-bottom: 16px;
     padding: 0 10px 10px;
 }
@@ -91,14 +91,14 @@ section h3 {
 
 .section-content {
     background: var(--talksy-white);
-    border-radius: 16px;
+    border-radius: 12px;
     padding: 10px;
 }
 
 .setting {
     background: var(--talksy-white);
     border: 1px solid var(--line);
-    border-radius: 16px;
+    border-radius: 12px;
     margin-bottom: 10px;
     padding: 16px 18px;
     display: flex;
@@ -124,7 +124,6 @@ section h3 {
 
 .setting-body p {
     margin: 0;
-    font-size: 14.5px;
     color: var(--ink);
     line-height: 1.55;
 }
@@ -186,7 +185,6 @@ ul {
 }
 
 li {
-    font-size: 14.5px;
     padding-left: 6px;
 }
 
@@ -226,7 +224,7 @@ a:hover {
 .email {
     font-weight: 600;
     padding-left: 24px;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
 }
 
 footer {
