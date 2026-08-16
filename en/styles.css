@@ -226,6 +226,7 @@ a:hover {
 .email {
     font-weight: 600;
     padding-left: 24px;
+    margin-bottom: 24px;
 }
 
 footer {
