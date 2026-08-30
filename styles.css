@@ -185,6 +185,13 @@ footer {
     letter-spacing: 0.05em;
     padding: 3px 8px;
     border-radius: 100px;
+    text-align: right;
+}
+
+.badge.wrap {
+    display: table;
+    text-align: right;
+    max-width: 70px;   /* tune this per your longest word in these 3 labels */
 }
 
 .badge.adv {
